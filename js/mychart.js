@@ -133,13 +133,20 @@ $(function () {
             },
             yAxis: {
                 title: {
-                    text: 'ヒヤリ度 (%)'
+//                    text: 'ヒヤリ度 (%)'
+                    text: ''
                 },
-                plotLines: [{
+                labels: {
+                   enabled: false
+                },
+                gridLineWidth: 0,
+                plotLines: [
+/*                {
                       value: 0,
                       width: 2,
                       color: '#808080'
-                    },
+                    }
+                  ,
                     {
                       value : 80,
                       color : 'green',
@@ -149,6 +156,7 @@ $(function () {
                         text : 'ヒヤリ'
                       }
                     }
+*/
                 ],
                 max: 100,
                 min: 0
