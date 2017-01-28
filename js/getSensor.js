@@ -101,6 +101,15 @@ var ArrayVehicle = {};
      ArrayVehicle["seatbelt_fr"]= obj.seatbelt;
  
   }, zone_fr);
+function getArrayMeme(){
+  return ArrayMeme;
+};
+function getArrayVital(){
+  return ArrayVital;
+};
+function getArrayVehicle(){
+  return ArrayVehicle
+};
 
 /*
 function idealHiyari(){

@@ -1,4 +1,8 @@
 function idealHiyari(){
+  var ArrayMeme = getArrayMeme();
+  var ArrayVital = getArrayVital();
+  var ArrayVehicle = getArrayVehicle();
+  
   var back
   if(ArrayVehicle["transmissionmode"] = -1){
     back = 1;
