@@ -2,11 +2,21 @@ var roomID = "test_teamg";
 var msg = {"roomID":roomID, "data":"NOT REQUIRED"};
 socket.emit('joinRoom', JSON.stringify(msg));
 
-
 var ArrayMeme = {};
 var ArrayVital ={};
 var ArrayVehicle = {};
 
+function Array(){
+  var Array = {};
+  this.getArray = function(){
+    return Array;
+  };
+  this.setArray = function(key,val){
+    Array[key] = val;
+  };
+}
+
+ArrayMeme = new Array();
 
   var vitalSubId = navigator.vehicle.vital.subscribe(
     function(vital) {
@@ -104,7 +114,7 @@ var ArrayVehicle = {};
  
   }, zone_fr);
 
-
+/*
 function idealHiyari(){
   var driver = Math.random()*40+ 50;
   var passenger = Math.random()*40+ 50;
@@ -116,6 +126,6 @@ function idealHiyari(){
 addEventListener('DOMContentLoaded', function() {
 	setInterval(idealHiyari, 100); // 更新頻度100ms
 });
-
+*/
 
 
