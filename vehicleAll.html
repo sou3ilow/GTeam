@@ -17,9 +17,9 @@
       </style>
 
       <!-- vehicle api 必須 : ここから-->
-      <script src="http://52.193.60.25:3000/socket.io/socket.io.js"></script>
-      <script src="http://52.193.60.25:3000/www/js/vehicleAPI.js"></script>
-      <script src="http://52.193.60.25:3000/www/js/vehicleAPI-client.js"></script>
+      <script src="js/socket.io.js"></script>
+      <script src="js/vehicleAPI.js"></script>
+      <script src="js/vehicleAPI-client.js"></script>
 
       <script>
         //var roomID = "YOUR.NAME.HERE@example.com"; //ユニークな文字列に変更して下さい
@@ -34,7 +34,8 @@
       <!-- vehicle api 必須 : ここまで -->
 
       <script>
-        var vehicleSpeedSub = navigator.vehicle.vehicleSpeed.subscribe(function(obj) {
+		  var vehicleSpeedSub = navigator.vehicle.vehicleSpeed.subscribe(function(obj) {
+			  console.log(obj);
           document.getElementById("vehicleSpeed").innerHTML = Math.floor(obj.speed /1000);
         });
         var engineSpeedSub = navigator.vehicle.engineSpeed.subscribe(function(obj) {

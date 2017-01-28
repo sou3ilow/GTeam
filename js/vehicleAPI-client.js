@@ -1,0 +1,1 @@
+var socket=io(PROTOCOL_WS);socket.on("vehicle data",function(o){var n=(JSON.parse(o),{});n.data=o,void 0!=window.navigator.databroker_connection.push&&window.navigator.databroker_connection.push.onmessage(n)}),socket.on("connect",function(o){console.log("Web Socket is connected.")});
