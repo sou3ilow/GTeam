@@ -104,7 +104,11 @@ var ArrayVehicle = {};
 
 
 function idealHiyari(){
-    console.log(ArrayVehicle["vehicleSpeed"]);
+  var driver = Math.random()*40+ 50;
+  var passenger = Math.random()*40+ 50;
+  var area = 0;
+  update_graph( driver, passenger, area );
+  update_illust( Math.floor(Math.random()*3)+1 );
 }
 
 

@@ -6,7 +6,7 @@ var num_driver = null;
 var num_passenger = null;
 var audio_cry = null;
 
-setInterval(function () {
+/*setInterval(function () {
   var driver = Math.random()*40+ 50;
   var passenger = Math.random()*40+ 50;
   var area = 0;
@@ -19,7 +19,7 @@ setInterval(function () {
 setInterval(function () {
   update_illust( Math.floor(Math.random()*3)+1 );
 }, drawinterval*20);
-
+*/
 
 //  callback function for update
 function update_graph( driver, passenger, area )
