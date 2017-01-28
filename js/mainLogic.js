@@ -10,9 +10,10 @@ function idealHiyari(){
   }else{
     back = 0;
   }
+  
   var idealhiyari = (90.32569992-2.056755548*ArrayVehicle["accelerationx"]-0.005740503*ArrayVehicle["steeringWheel"]-0.000105985*ArrayVehicle["vehicleSpeed"]*1000+0.025086402*ArrayVehicle["accelerationPedalPosition"]-0.000478298*ArrayVehicle["gyroyaw"]+back*10)/1.2;
   var driver = ArrayVital["heartrate"]/1.2;
-  console.log(driver);
+  console.log(ArrayVehicle["vehicleSpeed"]);
   var passenger = idealhiyari;
   console.log(passenger);
   var area = 0;
