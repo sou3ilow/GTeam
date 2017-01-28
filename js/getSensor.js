@@ -6,18 +6,6 @@ var ArrayMeme = {};
 var ArrayVital ={};
 var ArrayVehicle = {};
 
-function Array(){
-  var Array = {};
-  this.getArray = function(){
-    return Array;
-  };
-  this.setArray = function(key,val){
-    Array[key] = val;
-  };
-}
-
-ArrayMeme = new Array();
-
   var vitalSubId = navigator.vehicle.vital.subscribe(
     function(vital) {
     ArrayVital["heartrate"] = Math.floor(vital.heartrate);
