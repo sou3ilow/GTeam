@@ -111,13 +111,22 @@ function getArrayVehicle(){
   return ArrayVehicle
 };
 
+<<<<<<< .merge_file_zm6M1C
 /*
+=======
+
+var count = 0;
+>>>>>>> .merge_file_OsCKFu
 function idealHiyari(){
   var driver = Math.random()*40+ 50;
   var passenger = Math.random()*40+ 50;
   var area = 0;
   update_graph( driver, passenger, area );
-  update_illust( Math.floor(Math.random()*3)+1 );
+  
+  if (count%10 == 0){
+    update_illust( Math.floor(Math.random()*3)+1 );
+  }
+  count = count + 1;
 }
 
 addEventListener('DOMContentLoaded', function() {
