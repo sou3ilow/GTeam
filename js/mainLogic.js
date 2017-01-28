@@ -7,7 +7,7 @@ function idealHiyari(){
 
 
   console.log(ArrayVehicle["transmissionmode"]);
-  if(ArrayVehicle["transmissionmode"] = reverse){
+  if(ArrayVehicle["transmissionmode"] = "reverse"){
     back = 1;
   }else if(ArrayVehicle["transmissionmode"] = -1){
   }else{
