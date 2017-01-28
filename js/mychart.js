@@ -29,10 +29,10 @@ function update_graph( driver, passenger, area )
   if (series_driver) {
     // driver 
     series_driver.addPoint([x,driver], false, true);
-    num_driver.innerHTML = Math.floor( driver ) + "%";
+    num_driver.innerHTML = Math.floor( driver ) + "ヒヤリ";
     //  passenger
     series_passenger.addPoint([x,passenger], false, true);
-    num_passenger.innerHTML = Math.floor( passenger ) + "%";
+    num_passenger.innerHTML = Math.floor( passenger ) + "ヒヤリ";
     //  danger area
     series_area.addPoint([x,area], true, true);
   }
@@ -159,7 +159,7 @@ $(function () {
 */
                 ],
                 max: 100,
-                min: 0
+                min: 60
             },
             tooltip: {
                 formatter: function () {
@@ -204,6 +204,29 @@ $(function () {
                 }())
             },
             {
+                name: 'passenger',
+                type: 'spline', // グラフの形指定
+                lineWidth: 50,
+                marker: {
+                  enabled: false
+                },
+                color: 'rgba(233,120,120,1)',
+                data: (function () {
+                    // generate an array of random data
+                    var data = [],
+                        time = (new Date()).getTime(),
+                        i;
+
+                    for (i = -49; i <= 0; i += 1) {
+                        data.push({
+                            x: time + i * drawinterval,
+                            y: 0
+                        });
+                    }
+                    return data;
+                }())
+            },
+            {
                 name: 'driver',
                 type: 'spline', // グラフの形指定
                 lineWidth: 5,
@@ -224,11 +247,11 @@ $(function () {
                     }
                     return data;
                 }())
-            },
-            {
+            }
+/*          {
                 name: 'passenger',
                 type: 'spline', // グラフの形指定
-                lineWidth: 5,
+                lineWidth: 50,
                 marker: {
                   enabled: false
                 },
@@ -247,7 +270,7 @@ $(function () {
                     }
                     return data;
                 }())
-            }
+            }*/
             ]
         });
     });
