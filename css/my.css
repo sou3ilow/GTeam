@@ -55,21 +55,25 @@
     position:absolute;
     top:440px;
     left:740px;
+    color: #7cb5ec;
 }
 #passenger_hiyari{
     position:absolute;
     top:540px;
     left:750px;
+    color: #e97878;
 }
 #driver_hiyari_num{
     position:absolute;
     top:400px;
     left:850px;
+    color: #7cb5ec;
 }
 #passenger_hiyari_num{
     position:absolute;
     top:500px;
     left:850px;
+    color: #e97878;
 }
 
 #passenger_illust_1{
