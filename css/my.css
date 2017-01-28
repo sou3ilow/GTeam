@@ -6,9 +6,18 @@
     height:600px;
     min-width: 310px;
     margin: 0 auto;
-    opacity: 0.5; //半透明度 0.0-1.0
+    opacity: 1; //半透明度 0.0-1.0
+    z-index: 10;
 }
-
+#background{
+    position:absolute;
+    top:0;
+    left:0;
+    width:1024px;
+    height:768px;
+    background-color: #deffd4;
+    z-index: 0; 
+}
 #body   {
     font-family:Avenir , "Open Sans" , "Helvetica Neue" , Helvetica , Arial , Verdana , Roboto , "游ゴシック" , "Yu Gothic" , "游ゴシック体" , "YuGothic" , "ヒラギノ角ゴ Pro W3" , "Hiragino Kaku Gothic Pro" , "Meiryo UI" , "メイリオ" , Meiryo , "ＭＳ Ｐゴシック" , "MS PGothic" , sans-serif;
     position:absolute;
@@ -16,8 +25,17 @@
     left:0;
     width:1024px;
     height:768px;
+    z-index: 20; 
 }
-
+#loadingtitle
+{
+    position:absolute;
+    top:260px;
+    left:340px;
+    font-size: 3.4em;
+    font-weight: 900;
+    color: #ffffff;
+}
 .label{
     font-size: 1.4em;
     font-weight: 700;

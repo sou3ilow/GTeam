@@ -4,20 +4,35 @@
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 		<title>Highcharts Example</title>
     <link href="css/my.css" rel="stylesheet" type="text/css">
+    <link href="css/fakeLoader.css" rel="stylesheet" type="text/css">
 		<script type="text/javascript" src="js/jquery_1.8.2.min.js"></script>
 		<script type="text/javascript" src="js/jquery.jrumble.1.3.min.js"></script>
 		<script type="text/javascript" src="js/mychart.js"></script>
 	</head>
 	<body>
+	  <div id="fakeLoader"><div id="loadingtitle">正常判断測定</div></div>
+    <script src="js/fakeLoader.js"></script>
+    <script>
+     $("#fakeLoader").fakeLoader({
+       timeToHide:3000, //Time in milliseconds for fakeLoader disappear
+       zIndex:999, // Default zIndex
+       spinner:"spinner6",//Options: 'spinner1', 'spinner2', 'spinner3', 'spinner4', 'spinner5', 'spinner6', 'spinner7'
+       bgColor:"#2ecc71", //Hex, RGB or RGBA colors
+       imagePath:"img/akachan_1.png" //If you want can you insert your custom image
+     });
+    </script>    
+    
     <script src="js/highcharts.js"></script>
     <script src="js/modules/boost.js"></script>
     <script src="js/modules/exporting.js"></script>
+    <div id="background"></div>
     <div id="graph"></div>
     <div id="body">
       <div id="passenger">
         <img id="passenger_illust_1" src="img/akachan_1.png">
         <img id="passenger_illust_2" src="img/akachan_2.png">
         <img id="passenger_illust_3" src="img/akachan_3.png">
+        <audio id="cry" src="sound/cry.mp3" preload="auto></audio>
       </div>
       <div class="label" id="driver_hiyari">ヒヤリ度</div>
       <div class="indicator" id="driver_hiyari_num">60%</div>

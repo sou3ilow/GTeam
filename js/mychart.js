@@ -4,15 +4,15 @@ var series_passenger = null;
 var series_area = null;
 var num_driver = null;
 var num_passenger = null;
-
+var audio_cry = null;
 
 setInterval(function () {
-  var driver = Math.random()*40+ 60;
-  var passenger = Math.random()*40+ 60;
+  var driver = Math.random()*40+ 50;
+  var passenger = Math.random()*40+ 50;
   var area = 0;
-  if (Math.random()> 0.5) {
-    area = 120;
-  }
+//  if (Math.random()> 0.5) {
+//    area = 100;
+//  }
   update_graph( driver, passenger, area );
 }, drawinterval);
 
@@ -44,6 +44,7 @@ function update_illust( pattern )
   $('#passenger_illust_1').trigger('stopRumble');
   $('#passenger_illust_2').trigger('stopRumble');
   $('#passenger_illust_3').trigger('stopRumble');
+  audio_cry.pause();
 
   if (pattern == 1) {
     // normal
@@ -67,6 +68,8 @@ function update_illust( pattern )
     $('#passenger_illust_2').hide();
     $('#passenger_illust_3').show();
     $('#passenger_illust_3').trigger('startRumble');
+    audio_cry.load();
+    audio_cry.play();
     
 //      setTimeout( function() {
 //          $('#passenger_illust').trigger('stopRumble');
@@ -83,6 +86,7 @@ $(function () {
             }
         });
         
+        audio_cry = document.getElementById("cry");
         num_driver = document.getElementById('driver_hiyari_num');
         num_passenger = document.getElementById('passenger_hiyari_num');
         $('#passenger_illust_2').jrumble({
@@ -106,6 +110,7 @@ $(function () {
 ////                },
                 animation: false,
                 marginRight: 10,
+                backgroundColor: "#deffd4",
                 events: {
                     load: function () {
                         // set up the updating of the chart each second
@@ -128,7 +133,7 @@ $(function () {
             },
             yAxis: {
                 title: {
-                    text: '心拍数 (bpm)'
+                    text: 'ヒヤリ度 (%)'
                 },
                 plotLines: [{
                       value: 0,
@@ -136,7 +141,7 @@ $(function () {
                       color: '#808080'
                     },
                     {
-                      value : 90,
+                      value : 80,
                       color : 'green',
                       dashStyle : 'shortdash',
                       width : 2,
@@ -145,7 +150,7 @@ $(function () {
                       }
                     }
                 ],
-                max: 120,
+                max: 100,
                 min: 0
             },
             tooltip: {
@@ -193,6 +198,7 @@ $(function () {
             {
                 name: 'driver',
                 type: 'spline', // グラフの形指定
+                lineWidth: 5,
                 marker: {
                   enabled: false
                 },
@@ -214,6 +220,7 @@ $(function () {
             {
                 name: 'passenger',
                 type: 'spline', // グラフの形指定
+                lineWidth: 5,
                 marker: {
                   enabled: false
                 },
