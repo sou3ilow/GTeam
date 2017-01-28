@@ -1,16 +1,19 @@
 var count = 0;
+var back = 0;
 function idealHiyari(){
   var ArrayMeme = getArrayMeme();
   var ArrayVital = getArrayVital();
   var ArrayVehicle = getArrayVehicle();
 
-  var back
+
   console.log(ArrayVehicle["transmissionmode"]);
-  if(ArrayVehicle["transmissionmode"] = -1){
+  if(ArrayVehicle["transmissionmode"] = reverse){
     back = 1;
+  }else if(ArrayVehicle["transmissionmode"] = -1){
   }else{
     back = 0;
   }
+  console.log(back);
   
   var idealhiyari = (90.32569992-2.056755548*ArrayVehicle["accelerationx"]
   -0.005740503*ArrayVehicle["steeringWheel"]
