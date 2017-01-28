@@ -111,7 +111,7 @@ function getArrayVehicle(){
   return ArrayVehicle
 };
 
-<<<<<<< .merge_file_zm6M1C
+//<<<<<<< .merge_file_zm6M1C
 /*
 =======
 

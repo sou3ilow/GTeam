@@ -1,8 +1,9 @@
+var count = 0;
 function idealHiyari(){
   var ArrayMeme = getArrayMeme();
   var ArrayVital = getArrayVital();
   var ArrayVehicle = getArrayVehicle();
-  
+
   var back
   if(ArrayVehicle["transmissionmode"] = -1){
     back = 1;
@@ -16,7 +17,11 @@ function idealHiyari(){
   console.log(passenger);
   var area = 0;
   update_graph( driver, passenger, area );
-  update_illust( Math.floor(Math.random()*3)+1 );
+
+  if (count%10 == 0){
+    update_illust( Math.floor(Math.random()*3)+1 );
+  }
+  count = count + 1;
 }
 
 addEventListener('DOMContentLoaded', function() {
