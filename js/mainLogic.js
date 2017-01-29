@@ -6,14 +6,14 @@ function idealHiyari(){
   var ArrayVehicle = getArrayVehicle();
 
 
-  console.log(ArrayVehicle["transmissionmode"]);
+  //console.log(ArrayVehicle["transmissionmode"]);
   if(ArrayVehicle["transmissionmode"] === "reverse"){
     back = 1;
   }else if(ArrayVehicle["transmissionmode"] === -1){
   }else{
     back = 0;
   }
-  console.log(back);
+  //console.log(back);
   
   var idealhiyari = (90.32569992-2.056755548*ArrayVehicle["accelerationx"]
   -0.005740503*ArrayVehicle["steeringWheel"]
@@ -28,9 +28,9 @@ function idealHiyari(){
   if(isNaN(driver)){
     driver = 0;
   }
-  console.log(ArrayVehicle["vehicleSpeed"]);
+  //console.log(ArrayVehicle["vehicleSpeed"]);
   var passenger = idealhiyari;
-  console.log(passenger);
+  //console.log(passenger);
   var area = 0;
   update_graph( driver, passenger, area );
 
@@ -45,7 +45,7 @@ function idealHiyari(){
   }else{
     update_illust(1);
   }
-  console.log(passenger - driver);
+  //console.log(passenger - driver);
 }
 
 addEventListener('DOMContentLoaded', function() {
