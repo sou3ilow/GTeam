@@ -41,7 +41,7 @@
     font-weight: 700;
 }
 .indicator{
-    font-size: 3.0em;
+    font-size: 4.0em;
     font-weight: 900;
 }
 
@@ -53,26 +53,26 @@
 
 #driver_hiyari{
     position:absolute;
-    top:440px;
-    left:650px;
+    top:10px;
+    left:550px;
     color: #7cb5ec;
 }
 #passenger_hiyari{
     position:absolute;
-    top:540px;
-    left:650px;
+    top:110px;
+    left:550px;
     color: #e97878;
 }
 #driver_hiyari_num{
     position:absolute;
-    top:400px;
-    left:750px;
+    top:10px;
+    left:650px;
     color: #7cb5ec;
 }
 #passenger_hiyari_num{
     position:absolute;
-    top:500px;
-    left:750px;
+    top:110px;
+    left:650px;
     color: #e97878;
 }
 

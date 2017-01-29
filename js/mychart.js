@@ -159,8 +159,8 @@ $(function () {
                     }
 */
                 ],
-                max: 130,
-                min: 60
+                max: 110,
+                min: 70
             },
             tooltip: {
                 formatter: function () {
