@@ -1,4 +1,4 @@
-var roomID = "test_teamg";
+var roomID = "teamg";
 var msg = {"roomID":roomID, "data":"NOT REQUIRED"};
 socket.emit('joinRoom', JSON.stringify(msg));
 

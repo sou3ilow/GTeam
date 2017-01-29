@@ -19,10 +19,15 @@ function idealHiyari(){
   -0.005740503*ArrayVehicle["steeringWheel"]
   -0.000105985*ArrayVehicle["vehicleSpeed"]*1000
   +0.025086402*ArrayVehicle["accelerationPedalPosition"]
-  -0.000478298*ArrayVehicle["gyroyaw"]+back*10);
-
+  -0.000478298*ArrayVehicle["gyroyaw"]+back*2*ArrayVehicle["vehicleSpeed"]);
+  if(isNaN(idealhiyari)){
+    idealhiyari = 0;
+  }
   //var driver = ArrayVital["heartrate"];
   var driver = (ArrayVital["heartrate"]-85)*0.5+85;
+  if(isNaN(driver)){
+    driver = 0;
+  }
   console.log(ArrayVehicle["vehicleSpeed"]);
   var passenger = idealhiyari;
   console.log(passenger);

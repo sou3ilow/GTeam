@@ -48,7 +48,7 @@ function update_illust( pattern )
   $('#passenger_illust_3').trigger('stopRumble');
   
 
-
+    //audio_cry.load();
   if (pattern == 1 && before_pattern == 3) {
     // stop cry nomel
     $('#passenger_illust_1').show();
@@ -88,6 +88,7 @@ function update_illust( pattern )
     $('#passenger_illust_2').hide();
     $('#passenger_illust_3').show();
     $('#passenger_illust_3').trigger('startRumble');
+    before_pattern = 3;
   }else if (pattern == 3) {
     // cry!!
     $('#passenger_illust_1').hide();
@@ -96,6 +97,7 @@ function update_illust( pattern )
     $('#passenger_illust_3').trigger('startRumble');
     audio_cry.load();
     audio_cry.play();
+    before_pattern = 3;
     
 //      setTimeout( function() {
 //          $('#passenger_illust').trigger('stopRumble');
@@ -184,7 +186,7 @@ $(function () {
                     }
 */
                 ],
-                max: 110,
+                max: 125,
                 min: 70
             },
             tooltip: {
