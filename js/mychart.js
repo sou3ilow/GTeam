@@ -27,12 +27,13 @@ function update_graph( driver, passenger, area )
   var x = (new Date()).getTime(); // current time
   
   if (series_driver) {
-    // driver 
-    series_driver.addPoint([x,driver], false, true);
-    num_driver.innerHTML = Math.floor( driver ) + "ヒヤリ";
     //  passenger
     series_passenger.addPoint([x,passenger], false, true);
     num_passenger.innerHTML = Math.floor( passenger ) + "ヒヤリ";
+    // driver 
+    series_driver.addPoint([x,driver], false, true);
+    num_driver.innerHTML = Math.floor( driver ) + "ヒヤリ";
+
     //  danger area
     series_area.addPoint([x,area], true, true);
   }
@@ -115,8 +116,8 @@ $(function () {
                     load: function () {
                         // set up the updating of the chart each second
                         series_area = this.series[0];
-                        series_driver = this.series[1];
-                        series_passenger = this.series[2];
+                        series_driver = this.series[2];
+                        series_passenger = this.series[1];
                     }
                 }
             },
@@ -158,7 +159,7 @@ $(function () {
                     }
 */
                 ],
-                max: 100,
+                max: 130,
                 min: 60
             },
             tooltip: {

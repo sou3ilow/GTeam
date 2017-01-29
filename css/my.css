@@ -41,7 +41,7 @@
     font-weight: 700;
 }
 .indicator{
-    font-size: 4.0em;
+    font-size: 3.0em;
     font-weight: 900;
 }
 
@@ -54,25 +54,25 @@
 #driver_hiyari{
     position:absolute;
     top:440px;
-    left:740px;
+    left:650px;
     color: #7cb5ec;
 }
 #passenger_hiyari{
     position:absolute;
     top:540px;
-    left:700px;
+    left:650px;
     color: #e97878;
 }
 #driver_hiyari_num{
     position:absolute;
     top:400px;
-    left:850px;
+    left:750px;
     color: #7cb5ec;
 }
 #passenger_hiyari_num{
     position:absolute;
     top:500px;
-    left:850px;
+    left:750px;
     color: #e97878;
 }
 
