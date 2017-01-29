@@ -5,6 +5,7 @@ var series_area = null;
 var num_driver = null;
 var num_passenger = null;
 var audio_cry = null;
+var before_pattern = null;
 
 /*setInterval(function () {
   var driver = Math.random()*40+ 50;
@@ -45,14 +46,32 @@ function update_illust( pattern )
   $('#passenger_illust_1').trigger('stopRumble');
   $('#passenger_illust_2').trigger('stopRumble');
   $('#passenger_illust_3').trigger('stopRumble');
-  audio_cry.pause();
+  
 
-  if (pattern == 1) {
+
+  if (pattern == 1 && before_pattern == 3) {
+    // stop cry nomel
+    $('#passenger_illust_1').show();
+    $('#passenger_illust_2').hide();
+    $('#passenger_illust_3').hide();
+    audio_cry.pause();
+    before_pattern = 1;
+  }else if(pattern == 1){
     // normal
     $('#passenger_illust_1').show();
     $('#passenger_illust_2').hide();
     $('#passenger_illust_3').hide();
-  } else if (pattern == 2) {
+    before_pattern = 1;
+  }else if(pattern == 2 && before_pattern == 3){
+    //  Frightened
+    $('#passenger_illust_1').hide();
+    $('#passenger_illust_2').show();
+    $('#passenger_illust_3').hide();
+
+    $('#passenger_illust_2').trigger('startRumble');
+    audio_cry.pause();
+    before_pattern = 2;
+  }else if (pattern == 2) {
     //  Frightened
     $('#passenger_illust_1').hide();
     $('#passenger_illust_2').show();
@@ -62,8 +81,14 @@ function update_illust( pattern )
 //      setTimeout( function() {
 //          $('#passenger_illust').trigger('stopRumble');
 //      }, 1000 );
-
-  } else if (pattern == 3) {
+    before_pattern = 2;
+  }else if(pattern == 3 && before_pattern ==3){
+    // cry!!
+    $('#passenger_illust_1').hide();
+    $('#passenger_illust_2').hide();
+    $('#passenger_illust_3').show();
+    $('#passenger_illust_3').trigger('startRumble');
+  }else if (pattern == 3) {
     // cry!!
     $('#passenger_illust_1').hide();
     $('#passenger_illust_2').hide();
